@@ -1,5 +1,6 @@
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Calculadora IMC</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	</head>
@@ -12,7 +13,7 @@
 		<div class="panel-body">
 			<h1>IMC</h1>
 
-			<form class="form-horizontal" name="form" method="post" onSubmit="calculaimc()" >
+			<form class="form-horizontal" name="form" method="post" action="calcula.jsp" >
 			<fieldset>
 			<!-- Text input-->
 			<div class="form-group">
@@ -55,43 +56,6 @@
 			</form>
 		</div>
 	</div>
-<%
-String pesoStr = request.getParameter("peso");
-String alturaStr = request.getParameter("altura");
-String sexo = request.getParameter("sexo");
 
-int peso= pesoStr == null ? 0 : Integer.parseInt(pesoStr);
-int altura = alturaStr == null ? 0 : Integer.parseInt(alturaStr);
-
-int imc = peso / (altura * altura);
-
-if (sexo.equals("feminino")) {
-	if (imc < 19.1){
-					out.print("Seu IMC �: "+imc +"\nVoc� est� abaixo do peso!");
-				}else if (imc > 19.1 && imc <= 25.8){
-						out.print("Seu IMC �: "+imc +"\nVoc� est� com peso normal!");
-						}else if (imc > 25.8 && imc <= 27.3){
-							out.print("Seu IMC �: " + imc +"\nVoc� est� com sobrepeso!");
-								}else if (imc > 27.3 && imc <= 32.3){
-									out.print("Seu IMC �: " + imc +"\nVoc� est� acima do peso!");
-									}else if (imc > 32.3) {
-										out.print("Seu IMC �: " + imc +"\nVoc� est� obesa!");	
-									}
-} else if (sexo.equals("masculino")) {
-	if (imc < 20.7)
-				{
-					out.print("Seu IMC �: " + imc  +"\nVoc� est� abaixo do peso!");
-				}else if (imc > 20.7 && imc <= 26.4){
-						out.print("Seu IMC �: " + imc +"\nVoc� est� com peso normal!");
-							}else if (imc > 26.4 && imc <= 27.8){
-								out.print("Seu IMC �: " + imc +"\nVoc� est� com sobrepeso!");
-									}else if (imc > 27.8 && imc <= 31.1){
-										out.print("Seu IMC �: " + imc +"\nVoc� est� acima do peso!");
-											}else if (imc > 31.2) {
-												out.print("Seu IMC �: " + imc +"\nVoc� est� obeso!");
-											}
-				}
-
-%>
 </body>
 </html>
