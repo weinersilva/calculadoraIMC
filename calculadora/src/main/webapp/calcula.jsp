@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
 <head>
@@ -25,7 +26,7 @@ Double peso = Double.parseDouble(pesoStr);
 Double altura = Double.parseDouble(alturaStr);
 
 Double imc = peso / (altura * altura);
-
+<fmt:formatNumber pattern="##,##" value="${imc}" />
 if (sexo.equals("feminino")) {
 	if (imc < 19.1){
 					out.print("Seu IMC é: "+ imc +". Você está abaixo do peso!");
