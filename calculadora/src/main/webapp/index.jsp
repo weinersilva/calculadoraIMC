@@ -13,7 +13,7 @@
 		<div class="panel-body">
 			<h1>IMC</h1>
 
-			<form class="form-horizontal" name="form" method="post" action="calcula.jsp" >
+			<form class="form-horizontal" name="form" method="post" action="calculadora.jsp" >
 			<fieldset>
 			<!-- Text input-->
 			<div class="form-group">
