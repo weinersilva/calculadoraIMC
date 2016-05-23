@@ -1,4 +1,3 @@
-<%@page import="org.apache.catalina.util.StringParser"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.text.DecimalFormat" %>
@@ -18,6 +17,7 @@
 
 </head>
 <body>
+	<br><br><br><br>
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<h1>IMC</h1>
@@ -60,7 +60,11 @@
 				
 			%>
 				</div>
-				<input type="button" onclick="retorna();" value="Voltar" name="Voltar" class="btn btn-info" />
+				
+				<input type="button" onclick="retorna();" value="Voltar" name="Voltar" class="btn btn-info" align="right"/>
+				
+				<br><br><br><br>
 				</div>
+				
 </body>
 </html>
